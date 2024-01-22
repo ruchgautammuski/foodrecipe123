@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="12dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/recipe_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/recipe_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:alpha="0.6"
+        android:src="@drawable/gradient"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/recipe_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/lexend_deca"
+        android:textColor="@color/slate"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/recipe_image"
+        tools:text="Recipe Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/recipe_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:fontFamily="@font/lexend_deca"
+        android:textColor="@color/slate"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/recipe_name"
+        tools:text="Recipe Name" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/recipe_like"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_liked"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/recipe_unlike"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_unliked"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0.2"
+        android:background="@color/slate"
+        app:layout_constraintTop_toBottomOf="@id/recipe_desc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
